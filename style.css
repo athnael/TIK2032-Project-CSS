@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+background-color: #f7f7f2;
+color: #1e1e24;
+}
+header {
+position: fixed;
+width: 100%;
+top: 0;
+right: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 2rem 8rem;
+}
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Atur tinggi garis sesuai keinginan */
+    background-color: #1e1e24; /* Warna garis */
+    z-index: 999;
+  }
+  
+.Logo {
+  color: #1e1e24;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.navmenu {
+    display: flex;
+}
+.navmenu a {
+    display: inline-block;
+    margin: 0 1.5rem;
+    color: #1e1e24;
+    font-weight: 500;
+    transition: all 0.6s;
+}
+.navmenu a:hover {
+    transform: translateY(-5px);
+}
+.home {
+width: 100%;
+height: 100vh;
+display: grid;
+grid-template-columns: repeat (2, 1fr);
+align-items: center;
+padding: 10rem 5rem 0 18rem;
+gap: 1rem;
+}
+.home-img img {
+    width: 100%;
+    height: auto;
+}
+@keyframes typing {
+    from { width: 0; } /* Dimulai dari lebar 0 */
+    to { width: 36%; } /* Mencapai lebar maksimum */
+  }
+.home-text h2 {
+  position: absolute;
+  top: 30%;
+  left: 13%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Teks yang berlebihan disembunyikan */
+  border-right: .15em solid #1e1e24; /* Tanda kurung mengetik */
+  white-space: nowrap; /* Teks tidak mengalami perataan */
+  margin: 0 auto; /* Pusatkan teks secara horizontal */
+  letter-spacing: .15em; /* Jarak antar huruf */
+  animation: typing 4s steps(40, end) infinite alternate; /* Terapkan animasi */
+
+}
+.home-text h3 {
+position: absolute;
+top: 38%;
+left: 20%;
+padding-right: 1rem;
+font-weight: 500;
+margin-bottom: 2rem;
+}
+.home-text h4 {
+    position: absolute;
+    top: 43%;
+    left: 13%;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    }
+.home-text h5 {
+    position: absolute;
+    top: 47%;
+    left: 13%;
+    font-weight: normal;
+    font-size: 16;
+    margin-bottom: 1rem;
+}
+.home-text h3::before {
+content: "";
+position: absolute;
+width: 80px;
+height: 2px;
+background-color: #1e1e24;
+left: -93px;
+top: 10px;
+}
+.home-text p {
+margin-bottom: 2rem;
+}
+.btn {
+    position: absolute;
+    top: 55%;
+    display: inline-block;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #f7f7f2;
+    border: 1px solid #1e1e24;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    background: #1e1e24;
+    transition: all 0.5s;
+}
+.btn:hover {
+position: absolute;
+right: 50%;
+background: #f7f7f2;
+color: #1e1e24;
+transform: translateY(50px);
+}
+.socials-icons {
+    position: absolute;
+    top: 0%;
+    left: 3.3%;
+    display: flex;
+    margin-top: 28%;
+    padding: 0 8rem;
+    
+}
+.socials-icons a {
+    margin-right: 20px; /* Atur margin-right antara ikon-ikon */
+}
+    .socials-icons i {
+        color: #1e1e24;
+        font-size: 1.5rem;
+    }
+    .scroll-btn {
+    position: absolute;
+    bottom: 7%;
+    left: 9%;
+    }
+    .scroll-btn {
+        color: #1e1e24;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+    @keyframes zoomInOut {
+        0% {
+          transform: scale(1); /* Ukuran normal */
+        }
+        50% {
+          transform: scale(1.1); /* Perbesar 10% */
+        }
+        100% {
+          transform: scale(1); /* Kembali ke ukuran normal */
+        }
+      }
+    .home-img img {
+        max-width: 450px; /* Atur lebar maksimum gambar */
+        height: auto;
+        display: block;
+        margin: 0 auto; /* Pusatkan gambar secara horizontal */
+        float: right; /* Geser gambar ke kanan */
+        margin-top: -450px; /* Atur jarak atas dari gambar */
+        animation: zoomInOut 3s infinite alternate;
+    }
+    .gallery-images {
+        position: relative;
+        padding: 10rem 0; /* Atur padding sesuai kebutuhan */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .gallery-images img {
+        width: 95%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-images img:hover {
+        transform: scale(1.05);
+    }
+    .gallery h2 {
+        position: absolute;
+        left: 45.3%;
+        top: 117%;
+        font-size: 2rem;
+        color: #1e1e24;
+    }
+    .scroll-btn:active {
+        transform: translateY(50px);
+    }
+    
+    .blog {
+        position: relative;
+        padding: 11rem 0;
+        text-align: center;
+      }
+      
+      .blog h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #1e1e24;
+      }
+      
+      .blog-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+      
+      .blog-post {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .blog-post h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      
+      .blog-post p {
+        color: #666;
+        margin-bottom: 1rem;
+      }
+      
+      .blog-post a {
+        display: inline-block;
+        background-color: #1e1e24;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        margin-left: -1rem;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      
+      .blog-post a:hover {
+        background-color: #fff;
+      }
+      .blog-post img {
+        width: 250px; /* Lebar gambar */
+        height: 200px; /* Tinggi gambar */
+      }
+.contact {
+    padding: 5rem 0;
+  }
+  .contact h2 {
+    position: absolute;
+    top: 320%;
+    left: 44%;    
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #1e1e24;
+  }
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-info div {
+    flex-basis: 33%;
+  }
+
+  .contact-info h3 {
+    position: absolute;
+    top: 329%;
+    right: 61%;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    flex-basis: 33%; /* Menyamakan lebar setiap judul */
+    text-align: left; /* Menyelaraskan teks ke tengah */
+
+  }
+  .contact-info h4 {
+      position: absolute;
+      top: 329%;
+      right: 42.5%;
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+      flex-basis: 33%; /* Menyamakan lebar setiap judul */
+      text-align: left; /* Menyelaraskan teks ke tengah */
+    
+  }
+  .contact-info h5 {
+    position: absolute;
+    top: 329%;
+    right: 28%;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    flex-basis: 33%; /* Menyamakan lebar setiap judul */
+    text-align: left; /* Menyelaraskan teks ke tengah */
+  }
+  .contact-info p {
+    font-style: normal;
+    color: #666;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .contact-form textarea {
+    height: 120px;
+  }
+
+  .contact-form input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e1e24;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form input[type="submit"]:hover {
+    background-color: #333;
+  }
+      
