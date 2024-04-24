@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 :root {
-  --primaryTextColor: #232e35; /* Untuk title atau judul */
-  --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
+  --primaryTextColor: #232e35;
+  --secondaryTextColor: #656d72;
 
   --borderColor: #f1f1f1;
-  --lineColor: #d9d9d9; /* untuk line di pre-title */
+  --lineColor: #d9d9d9; 
 
   --primaryBackgroundColor: #fff;
   --secondaryBackgroundColor: #fbfbfb;
@@ -115,7 +115,6 @@ a {
 /* Layouts */
 .grid-3 {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
 }
@@ -160,7 +159,7 @@ nav ul li a:hover {
   transform: translateY(-5px);
 }
 
-/* Burger - Save for later on video */
+/* Burger */
 .burger div {
   width: 25px;
   height: 2px;
@@ -183,7 +182,6 @@ nav ul li a:hover {
   height: 720px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
   align-items: center;
 }
 
@@ -236,12 +234,7 @@ nav ul li a:hover {
   width: 85%;
   height: auto;
   border-radius: 10px;
-  /* transition: transform 2s ease; */
 }
-
-/* .gallery-images img:hover {
-  transform: scale(1.05);
-} */
 
 /* Blog */
 #blog {
@@ -250,7 +243,7 @@ nav ul li a:hover {
 
 .blog {
   border-radius: var(--itemBorderRadius);
-  overflow: hidden; /* supaya gambar yang diatas itu dia ngikut border radiusnya, karena yang dikasih border radius disini adalah div portfolio ini */
+  overflow: hidden;
   border: 1px solid var(--borderColor);
 }
 
@@ -315,7 +308,6 @@ nav ul li a:hover {
 
 .contact {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
 }
@@ -370,7 +362,6 @@ nav ul li a:hover {
 
 .contact-item-icon {
   background: var(--thirdBackgroundColor);
-  /* padding: 0.8rem 1rem; */
   width: 53px;
   height: 53px;
   border-radius: 9px;
